@@ -30,6 +30,10 @@ export default function About({ onNavigate = () => {} }) {
               I enjoy playing the piano and the guitar, but my favorite hobby is playing videogames with friends
             </p>
 
+            <Button href="/gabrieletrainiti.pdf" target="_blank" rel="noreferrer" variant="light" className="fw-semibold mb-3">
+              Check my CV
+            </Button>
+
             <div className="about-mini-grid mb-4">
               <div className="about-mini-item">
                 <span className="about-mini-value">10+</span>

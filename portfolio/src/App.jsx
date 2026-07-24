@@ -68,6 +68,9 @@ export default function App() {
       <Navbar expand="lg" className="shadow-sm app-navbar" role="navigation" aria-label="Main" variant="dark">
         <Container>
           <Navbar.Brand onClick={() => navigateTo('home')} style={{ cursor: 'pointer' }} className="fw-bold" tabIndex={0}>Gabriele Trainiti</Navbar.Brand>
+          <Navbar.Text>
+            <Nav.Link role="menuitem" href="https://github.com/Gabri1212/pgp-key/tree/main" target="_blank" rel="noopener noreferrer">PGP key</Nav.Link>
+          </Navbar.Text>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto" role="menubar">

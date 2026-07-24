@@ -9,7 +9,7 @@ export default function Home({ onNavigate = () => {} }) {
         <Row className="align-items-center w-100">
           <Col md={6} className="text-md-start text-center">
             <h1 className="display-5"><strong>Protecting systems. Securing futures.</strong></h1>
-            <p className="lead home-lead">I'm Gabriele Trainiti, a cybersecurity expert focusing on secure designs, reverse engineering, and incident response. I help organizations improve resilience and reduce risk.</p>
+            <p className="lead home-lead">I'm Gabriele, a cybersecurity expert focusing on secure designs, reverse engineering, and incident response. I help organizations improve resilience and reduce risk.</p>
             <div className="mt-4">
               <Button onClick={() => onNavigate('contact')} variant="primary" className="me-2">Work with me</Button>
               <Button onClick={() => onNavigate('blog')} variant="outline-light">Read my blog</Button>
