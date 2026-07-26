@@ -31,7 +31,7 @@ export default function About({ onNavigate = () => {} }) {
             </p>
 
             <Button href="/gabrieletrainiti.pdf" target="_blank" rel="noreferrer" variant="light" className="fw-semibold mb-3">
-              Check my CV
+              Check my academical CV
             </Button>
 
             <div className="about-mini-grid mb-4">

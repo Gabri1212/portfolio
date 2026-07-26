@@ -10,9 +10,11 @@ export default function App() {
   const [view, setView] = useState(() => {
     // initial view: prefer hash, then localStorage, then default
     const hash = (window.location.hash || '').replace('#', '')
+    if (hash === 'blog') return 'works'
     if (hash) return hash
     try {
       const saved = localStorage.getItem('view')
+      if (saved === 'blog') return 'works'
       if (saved) return saved
     } catch (e) {}
     return 'home'
@@ -45,7 +47,7 @@ export default function App() {
         return <Home onNavigate={navigateTo} />
       case 'about':
         return <About onNavigate={navigateTo} />
-      case 'blog':
+      case 'works':
         return <Blog />
       case 'contact':
         return <Contact />
@@ -76,7 +78,7 @@ export default function App() {
             <Nav className="ms-auto" role="menubar">
               <Nav.Link role="menuitem" aria-current={view === 'home' ? 'page' : undefined} active={view === 'home'} onClick={() => navigateTo('home')}>Home</Nav.Link>
               <Nav.Link role="menuitem" aria-current={view === 'about' ? 'page' : undefined} active={view === 'about'} onClick={() => navigateTo('about')}>About</Nav.Link>
-              <Nav.Link role="menuitem" aria-current={view === 'blog' ? 'page' : undefined} active={view === 'blog'} onClick={() => navigateTo('blog')}>Blog</Nav.Link>
+              <Nav.Link role="menuitem" aria-current={view === 'works' ? 'page' : undefined} active={view === 'works'} onClick={() => navigateTo('works')}>My works</Nav.Link>
               <Nav.Link role="menuitem" aria-current={view === 'contact' ? 'page' : undefined} active={view === 'contact'} onClick={() => navigateTo('contact')}>Contact me</Nav.Link>
             </Nav>
           </Navbar.Collapse>
@@ -91,8 +93,9 @@ export default function App() {
 
       <footer className="py-4 text-center app-footer">
         <Container>
-          <small>© {new Date().getFullYear()} Gabriele Trainiti - Cybersecurity Expert and Designer. All rights reserved.</small>
-        </Container>
+          <small>Gabriele Trainiti - Cybersecurity Expert and Designer. </small>
+          <small>This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style={{ maxWidth: '1em', maxHeight: '1em', marginLeft: '.2em' }} /><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style={{ maxWidth: '1em', maxHeight: '1em', marginLeft: '.2em' }} /><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style={{ maxWidth: '1em', maxHeight: '1em', marginLeft: '.2em' }} /><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style={{ maxWidth: '1em', maxHeight: '1em', marginLeft: '.2em' }} /></small>
+          </Container>
       </footer>
     </div>
   )

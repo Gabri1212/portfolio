@@ -63,6 +63,18 @@ main {
   opacity: 0.95;
 }
 
+.hot-topic-box {
+  display: inline-block;
+  max-width: 20rem;
+  padding: 1rem 1.1rem;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 1rem;
+  color: var(--p10);
+  backdrop-filter: blur(8px);
+}
+
 .page-section {
   background-color: var(--p2);
   color: var(--p10);
@@ -176,6 +188,63 @@ main {
 
 .blog-section {
   background-color: var(--p3);
+}
+
+.paper-article-card {
+  overflow: hidden;
+}
+
+.paper-cover-link {
+  aspect-ratio: 3 / 4;
+  width: min(85%, 260px);
+  height: auto;
+  margin-inline: auto;
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+  border-radius: 1rem;
+}
+
+.paper-cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+}
+
+.blog-paper-copy {
+  line-height: 1.7;
+  text-align: left;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+}
+
+.paper-read-link {
+  color: var(--p10);
+  font-weight: 600;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.paper-verify-link {
+  color: var(--p10);
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0.75;
+  font-size: 0.95rem;
+}
+
+.paper-read-link:hover,
+.paper-verify-link:hover,
+.paper-read-link:focus-visible {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.paper-verify-link:focus-visible {
+  text-decoration: underline;
+  opacity: 1;
 }
 
 .contact-section {
